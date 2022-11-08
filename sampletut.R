@@ -42,10 +42,12 @@ us_checkbox$clickElement()
 us_checkbox$refresh()
 
 # click on the color dropdown
-remDr$findElement(using = 'xpath', '//*[text()="Color"]')$clickElement()
+color_dropdown <- remDr$findElement(using = 'xpath', '//*[text()="Color"]')
+color_dropdown$clickElement()
 
 # click on the white color
-remDr$findElement(using = 'xpath', '//input[@aria-label="White"]')$clickElement()
+checkbox_filter_white <- remDr$findElement(using = 'xpath', '//input[@aria-label="White"]')
+checkbox_filter_white$clickElement()
 
 # identify the price 
 prices <- remDr$findElements(using = 'class name', 's-item__price')
